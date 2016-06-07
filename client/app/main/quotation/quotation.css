@@ -1,0 +1,18 @@
+.padded-view {
+  padding: 20px;
+}
+.top-tab {
+  text-align: center;
+}
+.top-tab-title {
+  margin: 0px;
+  padding: 10px 10px 10px 10px;
+}
+.selected-tab {
+  background-color: #354755;
+  color: white;
+}
+.tab-style {
+  padding-top: 35px;
+  border-bottom: 5px solid #354755;
+}

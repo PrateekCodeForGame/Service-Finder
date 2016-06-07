@@ -1,9 +1,42 @@
 <div>
   <div class="container">
     <div class="row">
-      <div class="col-md-8">
-
+      <div class="col-md-7">
+        <div class="row app-shade">
+          <div class="col-md-4 top-nav" ng-class="nav1">
+            <a ui-sref=".quotation" class="remove-decoration app-text-color">
+              <p class="top-nav-title">
+                <i class="fa fa-list"></i>
+              </p>
+              <p>
+                Offertlistan
+              </p>
+            </a>
+          </div>
+          <div class="col-md-4 top-nav">
+            <a href="#" class="remove-decoration app-text-color">
+              <p class="top-nav-title">
+                <i class="fa fa-list"></i>
+              </p>
+              <p>
+                Fragor & Svar
+              </p>
+            </a>
+          </div>
+          <div class="col-md-4 top-nav">
+            <a href="#" class="remove-decoration app-text-color">
+              <p class="top-nav-title">
+                <i class="fa fa-list"></i>
+              </p>
+              <p>
+                Sakerhet
+              </p>
+            </a>
+          </div>
+        </div>
+        <div ui-view=""></div>
       </div>
+      <div class="col-md-1"></div>
       <div class="col-md-4 app-text-color">
         <div class="row">
           <p>

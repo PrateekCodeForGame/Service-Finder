@@ -52,3 +52,20 @@
 .scroll-side {
   margin-top: 40px;
 }
+.top-nav {
+  text-align: center;
+  border: 2px solid #354755;
+  border-bottom: 3px solid #85C0D2;
+}
+.top-nav-title {
+  margin: 10px 0px 0px 0px;
+}
+.remove-decoration {
+  text-decoration: none;
+}
+.selected-nav {
+  text-align: center;
+  border: 2px solid #85C0D2;
+  border-bottom: 3px solid #85C0D2;
+  background-color: white;
+}

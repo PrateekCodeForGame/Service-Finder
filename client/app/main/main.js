@@ -6,5 +6,13 @@ angular.module('serviceFinderApp')
       .state('main', {
         url: '/',
         template: '<main></main>'
+      })
+      .state('main.quotation', {
+        url: '/quotation',
+        template: '<quotation></quotation>'
+      })
+      .state('main.quotation.categories', {
+        url: '/categories',
+        template: '<categories></categories>'
       });
   });
