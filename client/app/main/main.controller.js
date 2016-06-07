@@ -4,10 +4,18 @@
 
 class MainController {
 
-  constructor($http, $scope, socket) {
+  constructor($http, $scope, socket, $sce) {
     this.$http = $http;
     this.socket = socket;
     this.awesomeThings = [];
+
+    $scope.trustSrc = function(src) {
+    return $sce.trustAsResourceUrl(src);
+  }
+
+    $scope.videoUrl = "https://www.youtube.com/watch?v=04RnCJohvFY";
+    $scope.videoUrl = $scope.videoUrl.replace("watch?v=", "v/");
+    console.log($scope.videoUrl);
 
     $scope.$on('$destroy', function() {
       socket.unsyncUpdates('thing');

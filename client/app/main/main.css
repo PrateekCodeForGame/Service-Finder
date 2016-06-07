@@ -1,18 +1,15 @@
 .thing-form {
   margin: 20px 0;
 }
-
 #banner {
   border-bottom: none;
   margin-top: -20px;
 }
-
 #banner h1 {
   font-size: 60px;
   line-height: 1;
   letter-spacing: -1px;
 }
-
 .hero-unit {
   position: relative;
   padding: 30px 15px;
@@ -21,7 +18,37 @@
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   background: #4393B9;
 }
-
 .navbar-text {
   margin-left: 15px;
+}
+.column-padding {
+  padding: 20px;
+  padding-bottom: 10px;
+}
+.column-text-padding {
+  padding-left: 20px;
+  margin-bottom: 0px;
+}
+.column-italics-padding {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+.scroll-icons {
+  top: 15px;
+}
+.comments {
+  margin-left: 10px;
+  margin-right: 10px;
+  min-height: 100px;
+  border-radius: 10px;
+}
+.float-left {
+  float: left;
+}
+.comment-section {
+  padding: 40px;
+  padding-top: 10px;
+}
+.scroll-side {
+  margin-top: 40px;
 }

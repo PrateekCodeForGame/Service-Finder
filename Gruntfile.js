@@ -1,4 +1,3 @@
-// Generated on 2016-06-04 using generator-angular-fullstack 3.6.1
 'use strict';
 
 module.exports = function (grunt) {
