@@ -15,3 +15,8 @@
 .text-height {
   height: 100px;
 }
+.err {
+  text-align: center;
+  font-weight: bold;
+  color: red;
+}

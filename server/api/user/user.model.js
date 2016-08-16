@@ -20,6 +20,9 @@ var UserSchema = new Schema({
       }
     }
   },
+  organisationNumber: String,
+  phone: String,
+  contactPerson: String,
   role: {
     type: String,
     default: 'user'

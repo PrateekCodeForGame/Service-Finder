@@ -8,7 +8,7 @@
 
         <div class="form-group" ng-class="{ 'has-success': form.name.$valid && vm.submitted,
                                             'has-error': form.name.$invalid && vm.submitted }">
-          <label>Name</label>
+          <label>FÖRETAG</label>
 
           <input type="text" name="name" class="form-control" ng-model="vm.user.name"
                  required/>
@@ -61,6 +61,39 @@
           <p class="help-block"
              ng-show="form.confirmPassword.$error.match && vm.submitted">
             Passwords must match.
+          </p>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-success': form.organisationNumber.$valid && vm.submitted,
+                                            'has-error': form.organisationNumber.$invalid && vm.submitted }">
+          <label>ORGANISATIONSNUMMER</label>
+
+          <input type="text" name="organisationNumber" class="form-control" ng-model="vm.user.organisationNumber"
+                 required/>
+          <p class="help-block" ng-show="form.organisationNumber.$error.required && vm.submitted">
+            A ORGANISATIONSNUMMER is required
+          </p>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-success': form.phone.$valid && vm.submitted,
+                                            'has-error': form.phone.$invalid && vm.submitted }">
+          <label>TELEFON (DAGTID)</label>
+
+          <input type="text" name="phone" class="form-control" ng-model="vm.user.phone"
+                 required/>
+          <p class="help-block" ng-show="form.phone.$error.required && vm.submitted">
+            A TELEFON (DAGTID) is required
+          </p>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-success': form.contactPerson.$valid && vm.submitted,
+                                            'has-error': form.contactPerson.$invalid && vm.submitted }">
+          <label>KONTAKTPERSON</label>
+
+          <input type="text" name="contactPerson" class="form-control" ng-model="vm.user.contactPerson"
+                 required/>
+          <p class="help-block" ng-show="form.contactPerson.$error.required && vm.submitted">
+            A KONTAKTPERSON is required
           </p>
         </div>
 
