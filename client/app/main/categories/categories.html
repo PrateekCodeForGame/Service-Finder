@@ -1,13 +1,13 @@
-<div class="row">
-  <div class="col-md-4 align-services">
+<div class="row pointer-style" ng-show="showCategory">
+  <div class="col-md-4 align-services" ng-click="selectedCategory('Städning')">
     <p class="pad-top white-text">
       <i class="fa fa-xing-square fa-3x icon-background"></i>
     </p>
     <p>
-      <b>Stadning</b>
+      <b>Städning</b>
     </p>
   </div>
-  <div class="col-md-4 align-services">
+  <div class="col-md-4 align-services" ng-click="selectedCategory('Flytt & Transport')">
     <p class="pad-top white-text">
       <i class="fa fa-truck fa-3x icon-background"></i>
     </p>
@@ -15,7 +15,7 @@
       <b>Flytt & Transport</b>
     </p>
   </div>
-  <div class="col-md-4 align-services">
+  <div class="col-md-4 align-services" ng-click="selectedCategory('Bygg & Renovering')">
     <p class="pad-top white-text">
       <i class="fa fa-wrench fa-3x icon-background"></i>
     </p>
@@ -23,7 +23,7 @@
       <b>Bygg & Renovering</b>
     </p>
   </div>
-  <div class="col-md-4 align-services">
+  <div class="col-md-4 align-services" ng-click="selectedCategory('Tomt & Markarbeten')">
     <p class="pad-top white-text">
       <i class="fa fa-map-o fa-3x icon-background"></i>
     </p>
@@ -31,15 +31,15 @@
       <b>Tomt & Markarbeten</b>
     </p>
   </div>
-  <div class="col-md-4 align-services">
+  <div class="col-md-4 align-services" ng-click="selectedCategory('Fastighets & BRF-Tjänster')">
     <p class="pad-top white-text">
       <i class="fa fa-building-o fa-3x icon-background"></i>
     </p>
     <p>
-      <b>Fastighets & BRF-Tjanster</b>
+      <b>Fastighets & BRF-Tjänster</b>
     </p>
   </div>
-  <div class="col-md-4 align-services">
+  <div class="col-md-4 align-services" ng-click="selectedCategory('Arkitekt & Inredning')">
     <p class="pad-top white-text">
       <i class="fa fa-institution fa-3x icon-background"></i>
     </p>
@@ -47,7 +47,7 @@
       <b>Arkitekt & Inredning</b>
     </p>
   </div>
-  <div class="col-md-4 align-services">
+  <div class="col-md-4 align-services" ng-click="selectedCategory('Ekonomi & Juridik')">
     <p class="pad-top white-text">
       <i class="fa fa-balance-scale fa-3x icon-background"></i>
     </p>
@@ -55,7 +55,7 @@
       <b>Ekonomi & Juridik</b>
     </p>
   </div>
-  <div class="col-md-4 align-services">
+  <div class="col-md-4 align-services" ng-click="selectedCategory('Webb/IT & Design')">
     <p class="pad-top white-text">
       <i class="fa fa-laptop fa-3x icon-background"></i>
     </p>
@@ -63,12 +63,22 @@
       <b>Webb/IT & Design</b>
     </p>
   </div>
-  <div class="col-md-4 align-services">
+  <div class="col-md-4 align-services" ng-click="selectedCategory('Övriga tjänster')">
     <p class="pad-top white-text">
       <i class="fa fa-search fa-3x icon-background"></i>
     </p>
     <p>
-      <b>Ovriga Tjanster</b>
+      <b>Övriga tjänster</b>
     </p>
+  </div>
+</div>
+
+<div class="row pointer-style sub-text" ng-hide="showCategory">
+  <div class="row sub-text" ng-click="goBack()">
+    <label class="row pointer-style"><< Back</label>
+    <hr>
+  </div>
+  <div class="row" ng-repeat="cat in showSubCategories">
+    <div ng-click="subCatSelected(cat)"><b>{{cat}}</b></div>
   </div>
 </div>

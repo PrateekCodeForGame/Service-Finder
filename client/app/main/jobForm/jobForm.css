@@ -1,0 +1,17 @@
+.form-background {
+  background-color: #EFF3F6;
+  padding-top: 15px;
+}
+.generic-padding {
+  padding: 15px;
+}
+.button-width {
+  width: 100%;
+  background-color: #354755;
+  color: white;
+  border: none;
+  height: 40px;
+}
+.text-height {
+  height: 100px;
+}

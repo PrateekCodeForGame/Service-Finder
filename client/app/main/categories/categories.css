@@ -9,3 +9,9 @@
   padding: 15px;
   border-radius: 1000px;
 }
+.sub-text {
+  padding: 15px;
+}
+.pointer-style {
+  cursor: pointer;
+}

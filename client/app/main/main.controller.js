@@ -13,8 +13,7 @@
       }
 
       $scope.videoUrl = "https://www.youtube.com/watch?v=04RnCJohvFY";
-      $scope.videoUrl = $scope.videoUrl.replace("watch?v=", "v/");
-      console.log($scope.videoUrl);
+      $scope.videoUrl = $scope.videoUrl.replace("watch?v=", "embed/");
 
       $scope.nav1 = "selected-nav";
       $state.go('main.quotation');

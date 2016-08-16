@@ -19,10 +19,10 @@
 
       <ul class="nav navbar-nav navbar-right app-text-color">
         <img src="/assets/images/handShake.png" class="navbar-image" />
-        <li><a>Alla Foretag</a></li>
+        <li><a>Alla Företag</a></li>
         <li><a>Om Offertlistan</a></li>
-        <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="signup">Sign up</a></li>
-        <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="login">Login</a></li>
+        <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="signup">Registrera företag</a></li>
+        <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="login">Logga in</a></li>
         <li ng-show="nav.isLoggedIn()">
           <p class="navbar-text">Hello {{ nav.getCurrentUser().name }}</p>
         </li>

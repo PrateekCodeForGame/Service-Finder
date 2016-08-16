@@ -61,7 +61,7 @@
   margin: 10px 0px 0px 0px;
 }
 .remove-decoration {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 .selected-nav {
   text-align: center;

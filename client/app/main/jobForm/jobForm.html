@@ -1,0 +1,96 @@
+<div class="row form-background">
+  <div class="form-group generic-padding">
+    <label>Berätta vad du vill ha utfört</label>
+
+    <textarea class="form-control text-height" ng-model="form.description" placeholder="Tips: desto utförligare du beskriver dina behov desto lättare är det för dig att få fler och bättre svar" required/>
+  </div>
+
+  <div class="row generic-padding">
+    <div class="form-group col-md-6">
+      <label>Uppdraget skall utföras åt</label>
+
+      <select class="form-control" ng-options="key for key in jobType" ng-model="form.jobType">
+        <option></option>
+      </select>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label>När skall uppdraget påbörjas</label>
+
+      <select class="form-control" ng-options="key for key in jobTime" ng-model="form.jobTime">
+        <option></option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row generic-padding">
+    <div class="form-group col-md-6">
+      <label>Kategori</label>
+
+      <input type="text" class="form-control" ng-model="form.category" ng-disabled="true" required>
+    </div>
+    <div class="form-group col-md-6">
+      <label>Underkategori</label>
+
+      <select class="form-control" ng-options="key for key in subcategories" ng-model="form.subCategory">
+        <option></option>
+      </select>
+    </div>
+  </div>
+
+  <hr>
+  <div class="form-group generic-padding">
+    <label>Personnummer</label>
+
+    <input type="text" class="form-control" ng-model="form.ssn" placeholder="ÅÅmmddxxxx" required>
+  </div>
+  <hr>
+
+  <div class="form-group generic-padding">
+    <label>Kontaktuppgifter</label>
+  </div>
+
+  <div class="row generic-padding">
+    <div class="form-group col-md-6">
+      <input type="text" class="form-control" ng-model="form.name" placeholder="Namn" required>
+    </div>
+    <div class="form-group col-md-6">
+      <input type="text" class="form-control" ng-model="form.email" placeholder="E-Post" required>
+    </div>
+  </div>
+
+  <div class="row generic-padding">
+    <div class="form-group col-md-6">
+      <input type="text" class="form-control" ng-model="form.phone" placeholder="Telefon" required>
+    </div>
+    <div class="form-group col-md-6">
+      <input type="text" class="form-control" ng-model="form.city" placeholder="Ort" required>
+    </div>
+  </div>
+
+  <div class="row generic-padding">
+    <div class="form-group col-md-6">
+    </div>
+    <div class="form-group col-md-6">
+      <input type="text" class="form-control" ng-model="form.pin" placeholder="Postnummer" required>
+    </div>
+  </div>
+
+  <div class="row generic-padding">
+    <div class="form-group col-md-6">
+      <label>När vill du bli kontaktad</label>
+
+      <select class="form-control" ng-options="key for key in contactTime" ng-model="form.contactTime">
+        <option></option>
+      </select>
+    </div>
+    <div class="form-group col-md-6">
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row generic-padding">
+    <button class="button-width" ng-click="submitJob()">Offerera mig</button>
+  </div>
+</div>
