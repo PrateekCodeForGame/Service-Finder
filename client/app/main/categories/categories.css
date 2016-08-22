@@ -15,3 +15,6 @@
 .pointer-style {
   cursor: pointer;
 }
+.border-category {
+  border: 5px solid #354755;
+}

@@ -14,6 +14,7 @@ angular.module('serviceFinderApp')
       "Webb/IT & Design": ["Grafisk design","IT-hosting","IT-support","Mobilutveckling","Programmering","Sökmotoroptimering","Tryckeri & Profilprodukter","Webbdesign","Webbutveckling","Webb/IT & Design - Övrigt"],
       "Övriga tjänster": ["Barnpassning & Läxhjälp","Mäklartjänster","Övriga Tjänster - Övrigt"]
     }
+    factory.locations = ["Alingsås", "Borlänge", "Borås", "Enköping", "Eskilstuna", "Falun", "Gävle", "Göteborg", "Halmstad", "Helsingborg", "Jönköping", "Kalmar", "Karlskrona", "Karlstad", "Kristianstad", "Landskrona", "Lidköping", "Linköping", "Luleå", "Lund", "Malmö", "Motala", "Norrköping", "Nyköping", "Piteå", "Sandviken", "Skellefteå", "Skövde", "Stockholm", "Sundsvall", "Södertälje", "Trelleborg", "Trollhättan", "Uddevalla", "Umeå", "Varberg", "Västerås", "Växjö", "Ängelholm", "Örebro", "Örnsköldsvik", "Östersund"];
     factory.selectedCategory = "";
     factory.selectedSubCategory = "";
 

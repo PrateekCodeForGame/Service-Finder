@@ -18,7 +18,7 @@ class CategoriesComponent {
       allData.resetSelect();
       $scope.showCategory = true;
       $scope.showSubCategories = [];
-      $state.go('main.quotation.jobForm');
+      $state.go('main.quotation.categories');
     };
 
     $scope.subCatSelected = function(name) {

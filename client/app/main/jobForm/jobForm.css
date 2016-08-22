@@ -20,3 +20,6 @@
   font-weight: bold;
   color: red;
 }
+.right-float {
+  float: right;
+}
