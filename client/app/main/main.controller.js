@@ -4,9 +4,14 @@
 
   class MainController {
 
-    constructor($http, $scope, socket, $sce, $state) {
+    constructor($http, $scope, socket, $sce, $state, allData) {
       this.$http = $http;
       this.socket = socket;
+      $scope.jobs = [];
+
+      allData.getAllJobs().then(function(response){
+        $scope.jobs = response;
+      });
 
       $scope.trustSrc = function(src) {
         return $sce.trustAsResourceUrl(src);

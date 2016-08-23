@@ -69,3 +69,11 @@
   border-bottom: 3px solid #85C0D2;
   background-color: white;
 }
+.job-posts {
+  max-height: 250px;
+  overflow: auto;
+}
+.fix-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

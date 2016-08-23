@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('serviceFinderApp')
-  .factory('allData', function () {
+  .factory('allData', function ($q, $http) {
     var factory = {};
     factory.categories = {
       "Städning": ["Bygg & Grovstädning","Dödsbostädning","Flyttstädning","Fönsterputsning","Golvvård","Hemstädning","Hotell & Restaurangstädning","Industri & Lagerstädning","Kontors & Butiksstädning","Matt & Möbeltvätt","Trapphusstädning","Tvättning & Strykning","Städning - Övrigt"],
@@ -17,6 +17,8 @@ angular.module('serviceFinderApp')
     factory.locations = ["Alingsås", "Borlänge", "Borås", "Enköping", "Eskilstuna", "Falun", "Gävle", "Göteborg", "Halmstad", "Helsingborg", "Jönköping", "Kalmar", "Karlskrona", "Karlstad", "Kristianstad", "Landskrona", "Lidköping", "Linköping", "Luleå", "Lund", "Malmö", "Motala", "Norrköping", "Nyköping", "Piteå", "Sandviken", "Skellefteå", "Skövde", "Stockholm", "Sundsvall", "Södertälje", "Trelleborg", "Trollhättan", "Uddevalla", "Umeå", "Varberg", "Västerås", "Växjö", "Ängelholm", "Örebro", "Örnsköldsvik", "Östersund"];
     factory.selectedCategory = "";
     factory.selectedSubCategory = "";
+    factory.jobs = [];
+    factory.reviews = [];
 
     factory.selectCategory = function(name) {
       factory.selectedCategory = name;
@@ -29,6 +31,19 @@ angular.module('serviceFinderApp')
     factory.resetSelect = function() {
       factory.selectedCategory = "";
       factory.selectedSubCategory = "";
-    }
+    };
+
+    factory.getAllJobs = function() {
+      var deferred = $q.defer();
+      $http({
+        url: "/api/jobs",
+        method: "GET",
+      }).then(function(response) {
+        factory.jobs = response.data;
+        deferred.resolve(factory.jobs);
+      });
+
+      return deferred.promise;
+    };
     return factory;
   });

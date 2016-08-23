@@ -73,12 +73,16 @@
   </div>
 </div>
 
-<div class="row pointer-style sub-text" ng-hide="showCategory">
+<div class="row pointer-style sub-text border-category" ng-hide="showCategory">
   <div class="row sub-text" ng-click="goBack()">
     <label class="row pointer-style"><< Tillbaka</label>
     <hr>
   </div>
-  <div class="row" ng-repeat="cat in showSubCategories">
-    <div ng-click="subCatSelected(cat)"><b>{{cat}}</b></div>
+  <div class="row">
+  <select class="dropdown-box" ng-class="hovering" ng-mouseleave="endHover()" ng-mouseenter="startHover()" ng-model="selectedSubcategory" ng-options="cat for cat in showSubCategories">
+    <option></option>
+  </select>
+  <button class="next-button" ng-click="subCatSelected()">Kom Igång</button>
   </div>
+
 </div>

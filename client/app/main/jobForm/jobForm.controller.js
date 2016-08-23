@@ -2,7 +2,7 @@
 (function(){
 
 class JobFormComponent {
-  constructor($scope, allData, $timeout, $state) {
+  constructor($scope, allData, $timeout, $state, $http) {
     $scope.$emit("selectNav2", {});
     $scope.form = {};
     $scope.errorMessage = "";
@@ -36,9 +36,15 @@ class JobFormComponent {
         $timeout(function() { $scope.errorMessage = ""; }, 3000);
       }
       else {
-        allData.resetSelect();
-        $scope.form = {};
-        $state.go('main.quotation.categories');
+        $http({
+          url: "/api/jobs",
+          method: "POST",
+          data: $scope.form
+        }).then(function(response) {
+          allData.resetSelect();
+          $scope.form = {};
+          $state.go('main.quotation.submitForm');
+        });
       };
     }
   }

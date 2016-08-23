@@ -18,5 +18,9 @@ angular.module('serviceFinderApp')
       .state('main.quotation.jobForm', {
         url: '/jobform',
         template: '<job-form></job-form>'
+      })
+      .state('main.quotation.submitForm', {
+        url: '/submitForm',
+        template: '<submit-form></submit-form>'
       });
   });

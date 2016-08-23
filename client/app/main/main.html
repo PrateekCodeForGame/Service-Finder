@@ -64,35 +64,18 @@
             <b>Senaste förfrågningarna</b>
           </p>
         </div>
-        <div class="row app-shade">
-          <div class="col-md-8">
+        <div class="row app-shade job-posts">
+          <div class="app-shade" ng-repeat="job in jobs">
+            <p class="column-text-padding fix-description">
+              {{job.description}}
+            </p>
             <p class="column-text-padding">
-              Kranbil for nyft av ett spa och pool i Varmdo
+              {{job.category}}
             </p>
             <p class="column-italics-padding">
-              <i>Kranbil/Stockholm</i>
+              <i>{{job.city}}</i>
             </p>
           </div>
-          <div class="col-md-1"></div>
-          <div class="col-md-1 scroll-icons">
-            <span><i class="fa fa-chevron-up"></i></span>
-          </div>
-          <div class="col-md-1"></div>
-        </div>
-        <div class="row app-shade">
-          <div class="col-md-8">
-            <p class="column-text-padding">
-              Forbattra dranering av ca 38 lpm av befintlig byggnad i...
-            </p>
-            <p class="column-italics-padding">
-              <i>Dranering/Stockholm</i>
-            </p>
-          </div>
-          <div class="col-md-1"></div>
-          <div class="col-md-1 scroll-icons">
-            <span><i class="fa fa-chevron-down"></i></span>
-          </div>
-          <div class="col-md-1"></div>
         </div>
         <div class="row app-icon-background">
           <p class="white-text column-padding">
