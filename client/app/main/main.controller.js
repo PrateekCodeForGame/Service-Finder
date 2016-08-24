@@ -4,13 +4,19 @@
 
   class MainController {
 
-    constructor($http, $scope, socket, $sce, $state, allData) {
+    constructor($http, $scope, socket, $sce, $state, allData, $uibModal) {
       this.$http = $http;
       this.socket = socket;
       $scope.jobs = [];
+      $scope.reviews = [];
+      $scope.currentReview = 0;
 
       allData.getAllJobs().then(function(response){
         $scope.jobs = response;
+      });
+
+      allData.getAllReviews().then(function(response){
+        $scope.reviews = response;
       });
 
       $scope.trustSrc = function(src) {
@@ -46,6 +52,27 @@
         $scope.nav2 = "";
         $scope.nav1 = "";
         $scope.navText = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.";
+      }
+
+      $scope.openReviewModal = function() {
+        var modalInstance = $uibModal.open({
+          ariaLabelledBy: 'modal-title',
+          ariaDescribedBy: 'modal-body',
+          templateUrl: 'reviewAdd.html',
+          controller: 'reviewAddCtrl',
+        });
+      }
+
+      $scope.next = function() {
+        if($scope.currentReview < ($scope.reviews.length - 1)){
+          $scope.currentReview += 1;
+        }
+      }
+
+      $scope.back = function() {
+        if($scope.currentReview > 0){
+          $scope.currentReview -= 1;
+        }
       }
 
       $scope.$on('$destroy', function() {

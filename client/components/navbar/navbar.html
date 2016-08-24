@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/" class="navbar-brand app-text-color">Offertlistan.se</a>
+      <a ui-sref="main.quotation.categories" class="navbar-brand app-text-color">Offertlistan.se</a>
     </div>
     <div uib-collapse="nav.isCollapsed" class="navbar-collapse collapse" id="navbar-main">
       <ul class="nav navbar-nav">
@@ -19,8 +19,8 @@
 
       <ul class="nav navbar-nav navbar-right app-text-color">
         <img src="/assets/images/handShake.png" class="navbar-image" />
-        <li><a>Alla Företag</a></li>
-        <li><a>Om Offertlistan</a></li>
+        <li><a ui-sref="">Alla Företag</a></li>
+        <li><a ui-sref="aboutus">Om Offertlistan</a></li>
         <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="signup">Registrera företag</a></li>
         <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="login">Logga in</a></li>
         <li ng-show="nav.isLoggedIn()">

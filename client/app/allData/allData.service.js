@@ -45,5 +45,19 @@ angular.module('serviceFinderApp')
 
       return deferred.promise;
     };
+
+    factory.getAllReviews = function() {
+      var deferred = $q.defer();
+      $http({
+        url: "/api/reviews",
+        method: "GET",
+      }).then(function(response) {
+        factory.reviews = response.data;
+        deferred.resolve(factory.reviews);
+      });
+
+      return deferred.promise;
+    };
+
     return factory;
   });

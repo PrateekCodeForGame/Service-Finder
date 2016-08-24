@@ -20,13 +20,16 @@
     <!-- build:css({.tmp,client}) app/app.css -->
       <link rel="stylesheet" href="app/app.css">
       <!-- injector:css -->
+      <link rel="stylesheet" href="app/aboutus/aboutus.css">
       <link rel="stylesheet" href="app/admin/admin.css">
       <link rel="stylesheet" href="app/app.css">
+      <link rel="stylesheet" href="app/companies/companies.css">
       <link rel="stylesheet" href="app/main/categories/categories.css">
       <link rel="stylesheet" href="app/main/jobForm/jobForm.css">
       <link rel="stylesheet" href="app/main/main.css">
       <link rel="stylesheet" href="app/main/quotation/quotation.css">
       <link rel="stylesheet" href="app/main/submitForm/submitForm.css">
+      <link rel="stylesheet" href="app/services/services.css">
       <link rel="stylesheet" href="components/footer/footer.css">
       <link rel="stylesheet" href="components/modal/modal.css">
       <link rel="stylesheet" href="components/oauth-buttons/oauth-buttons.css">
@@ -77,22 +80,29 @@
     <!-- build:js(.tmp) app/app.js -->
       <script src="app/app.js"></script>
       <!-- injector:js -->
-      <script src="components/auth/auth.module.js"></script>
       <script src="app/admin/admin.module.js"></script>
+      <script src="components/auth/auth.module.js"></script>
       <script src="components/util/util.module.js"></script>
+      <script src="app/main/reviewController.js"></script>
+      <script src="app/account/settings/settings.controller.js"></script>
       <script src="app/account/signup/signup.controller.js"></script>
       <script src="app/admin/admin.controller.js"></script>
-      <script src="app/account/account.js"></script>
+      <script src="app/aboutus/aboutus.controller.js"></script>
       <script src="app/admin/admin.router.js"></script>
       <script src="app/allData/allData.service.js"></script>
       <script src="app/app.constant.js"></script>
+      <script src="app/companies/companies.controller.js"></script>
+      <script src="app/companies/companies.js"></script>
       <script src="app/main/categories/categories.controller.js"></script>
       <script src="app/main/jobForm/jobForm.controller.js"></script>
       <script src="app/main/main.controller.js"></script>
       <script src="app/main/main.js"></script>
       <script src="app/main/quotation/quotation.controller.js"></script>
+      <script src="app/aboutus/aboutus.js"></script>
       <script src="app/main/submitForm/submitForm.controller.js"></script>
-      <script src="app/account/login/login.controller.js"></script>
+      <script src="app/services/services.controller.js"></script>
+      <script src="app/services/services.js"></script>
+      <script src="app/account/account.js"></script>
       <script src="components/auth/auth.service.js"></script>
       <script src="components/auth/interceptor.service.js"></script>
       <script src="components/auth/router.decorator.js"></script>
@@ -105,7 +115,7 @@
       <script src="components/oauth-buttons/oauth-buttons.controller.js"></script>
       <script src="components/oauth-buttons/oauth-buttons.directive.js"></script>
       <script src="components/socket/socket.service.js"></script>
-      <script src="app/account/settings/settings.controller.js"></script>
+      <script src="app/account/login/login.controller.js"></script>
       <script src="components/util/util.service.js"></script>
       <!-- endinjector -->
     <!-- endbuild -->
