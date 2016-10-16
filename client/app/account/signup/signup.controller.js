@@ -7,9 +7,10 @@ class SignupController {
   submitted = false;
   //end-non-standard
 
-  constructor(Auth, $state) {
+  constructor(Auth, $state, $scope, allData) {
     this.Auth = Auth;
     this.$state = $state;
+    $scope.locations = allData.locations;
   }
 
   register(form) {
@@ -23,6 +24,7 @@ class SignupController {
         organisationNumber: this.user.organisationNumber,
         phone: this.user.phone,
         contactPerson: this.user.contactPerson,
+        city: this.user.city
       })
       .then(() => {
         // Account created, redirect to home

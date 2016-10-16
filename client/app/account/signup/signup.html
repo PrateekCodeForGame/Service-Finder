@@ -87,6 +87,14 @@
           </p>
         </div>
 
+        <div class="form-group">
+          <label>Ort</label>
+
+          <select class="form-control" ng-options="key for key in locations" ng-model="vm.user.city">
+            <option></option>
+          </select>
+        </div>
+
         <div class="form-group" ng-class="{ 'has-success': form.contactPerson.$valid && vm.submitted,
                                             'has-error': form.contactPerson.$invalid && vm.submitted }">
           <label>KONTAKTPERSON</label>
